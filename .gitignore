@@ -1,0 +1,12 @@
+.vagrant
+*.log
+*.tfvars
+mykey
+*.pub
+*.tfstate
+*.tfstate.backup
+.terraform
+README.md
+.env.dev
+.env.prod
+.env.prod.db

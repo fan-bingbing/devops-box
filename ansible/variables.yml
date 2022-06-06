@@ -1,0 +1,42 @@
+---
+-
+  hosts: linux
+  gather_facts: true
+  # Variable: variables that will apply to the play, on all target systems
+  vars_files:
+    - external_vars.yml
+
+  # vars_prompt:
+  #   - name: username
+  #     private: false
+  # Task: the list of tasks that will be executed within the playbook
+  tasks:
+    - name: Test vars_prompt
+      debug:
+        msg: "{{ ansible_user }}"
+
+    - name: Test external dictionary key value
+      debug:
+        msg: "{{ external_example_key }}"
+
+    - name: Test external named dictionary dictionary
+      debug:
+        msg: "{{ external_dict }}"
+
+    - name: Test external named dictionary dictionary key value with dictionary dot notation
+      debug:
+        msg: "{{ external_dict.dict_key }}"
+
+    - name: Test external named list
+      debug:
+        msg: "{{ external_named_list }}"
+
+    - name: Test external named list first item dot notation
+      debug:
+        msg: "{{ external_named_list.0 }}"
+
+    - name: Test
+      debug:
+        msg: "{{ ansible_hostname.ansible_port | default('22') }}"
+
+...

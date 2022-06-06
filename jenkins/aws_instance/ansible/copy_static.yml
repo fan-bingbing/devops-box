@@ -1,0 +1,13 @@
+-
+  name: test connectivity to target hosts
+  hosts: web
+  become: True
+  tasks:
+    # - name: copy over static file
+    #   template: src=/vagrant/jenkins/aws_instance/static/index.html dest=/sites/demo/index.html
+    # - name: copy over static file
+    #   template: src=/vagrant/jenkins/aws_instance/static/style.css dest=/sites/demo/style.css
+    # - name: copy over static file
+    #   template: src=/vagrant/jenkins/aws_instance/static/thumb.png dest=/sites/demo/thumb.png
+    - name: copy over static folder
+      copy: src=/vagrant/jenkins/aws_instance/web/ dest=/sites/demo/web

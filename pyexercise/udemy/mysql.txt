@@ -1,0 +1,4 @@
+install docker
+from docker-hub get mysql offical image
+docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag # run mysql container
+docker exec -it mysql mysql -uroot -p # start a mysql client inside the Docker container

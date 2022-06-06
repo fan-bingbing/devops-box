@@ -1,0 +1,24 @@
+[control]
+local ansible_connection=local
+
+[web]
+target1 ansible_host=rfexpert.net
+[web:vars]
+ansible_user=ubuntu
+
+[uworkers]
+ubuntu1 ansible_host=52.65.93.129
+[uworkers:vars]
+ansible_user=ubuntu
+ansible_become=true
+
+[cworkers]
+centos1 ansible_host=3.25.210.27
+
+[cworkers:vars]
+ansible_user=centos
+ansible_become=true
+
+[linux:children]
+uworkers
+cworkers

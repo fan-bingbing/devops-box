@@ -1,0 +1,23 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: default
+  name: new-joiner
+rules:
+- apiGroups: ["", "apps"] # "" indicates the core API group
+  resources: ["*"]
+  verbs: ["get", "watch", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: put-users-to-role
+  namespace: default
+subjects:
+- kind: User
+  name: aaron-linux # aaron is linux username
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: new-joiner
+  apiGroup: rbac.authorization.k8s.io

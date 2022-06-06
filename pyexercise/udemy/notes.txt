@@ -1,0 +1,22 @@
+1. how to write code on a whiteboard or paper
+2. know basic control flow
+3. be prepared to discuss how you use python in the past, project/anaconda/git/django/database
+4. solve common code questions fizzbuzz/fibonacci...
+
+5. basic data types and usage, list and dictionary comprehensions
+tuple packing/unpacking
+parallel assignment
+variable is a tag of object, type(variable), id(variable), 
+a is(operator) c check if a and c are pointing to the same object
+operator %modular, //floor division(minus value)
+check python verion: import sys print(sys.version)
+check how many reference pointing to particular object:sys.getrefcount(x)
+delete variable to a object: del x
+naming conventions: lowercase and underscore for variables, uppercase and camel case for constant and class names
+what happens in background when a .py is running: generate .pyc file which is bytecode file, and python VM will execute this file
+
+6. decorators and generators
+7. OOP inheritance, attributes/methods/inheritance/initialization/overwrite methods
+8. have python related questions ready to ask
+9. other tech besides python: linux/containers/database
+10.advanced data structures and algorithms

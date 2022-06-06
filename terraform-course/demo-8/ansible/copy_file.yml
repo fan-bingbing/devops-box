@@ -1,0 +1,9 @@
+-
+  name: test connectivity to target hosts
+  hosts: web
+  become: True
+  tasks:
+    - name: copy over nginx.conf
+      template: src=/vagrant/terraform-course/demo-8/static/nginx.conf dest=/etc/nginx/nginx.conf
+    - name: reload nginx
+      command: systemctl reload nginx

@@ -1,0 +1,42 @@
+---
+
+usrp_setup:
+  ip: 'addr=10.0.22.190'
+  rx_gain: 30
+  channel: 0
+  rx_bw: 100e3
+  gpsdo_available: False
+  use_external_reference: True
+
+test_attribute:
+  samp_rate: 500e3 # Note, minimum sampling rate on N200 is 200ksps
+  centre_freq: [406.028e6, 406.031e6, 406.040e6]
+  # ceentre_freq_offset: 10e3
+  total_to_measure: 5
+  pass_data_in_file: False #True
+  capture_threshold: 500  # -18dbm input signal
+  rx_duration: 0.5
+  cutoff: 4000
+  decimation_factor: 5
+  first_filter_iq: False
+  first_decimate_iq: False
+
+  start: 400 # MHz
+  stop: 450 # MHz
+  step: 10 # MHz
+  offset: 0.01 # MHz  set 10kHz offset
+
+sig_gen_1:
+  rf_frequency: 406 # MHz
+  level_dbm: -40 #dBm
+
+  start: -45 #dBm
+  stop: -35 #dBm
+  step: 1 #dBm
+
+
+
+
+
+
+...

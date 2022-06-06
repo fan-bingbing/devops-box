@@ -1,0 +1,15 @@
+{
+    "Id": "Policy1601444481806",
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "Stmt1601444480136",
+        "Action": [
+          "s3:GetObject"
+        ],
+        "Effect": "Allow",
+        "Resource": "arn:aws:s3:::s3-website.rfexpert.net/*",
+        "Principal": "*"
+      }
+    ]
+  }

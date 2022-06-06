@@ -1,0 +1,11 @@
+-
+  name: test connectivity to target hosts
+  hosts: web
+  become: True
+  tasks:
+    - name: copy over index.html
+      copy: src=/vagrant/jenkins/aws_instance/web/index.html dest=/sites/demo/web/index.html
+    # - name: copy over nginx.conf
+    #   template: src=/vagrant/jenkins/aws_instance/nginx/nginx.conf dest=/etc/nginx/nginx.conf
+    - name: reload nginx
+      command: systemctl reload nginx

@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-basic
+
+spec:
+  rules:
+  - host: fleetman.com # edit /etc/hosts add minikube ip mapped to fleetman.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: fleetman-webapp
+          servicePort: 80
+  

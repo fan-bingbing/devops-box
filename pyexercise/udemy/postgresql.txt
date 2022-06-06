@@ -1,0 +1,12 @@
+follow official instructions, install postgresql-11, pgadim4
+sudo apt-get install postgresql-11 pgadmin4 (or try docker/container)
+
+commands:
+psql -U postgres # login
+sudo /etc/init.d/postgresql restart # restart server
+sudo nano  /etc/postgresql/11/main/pg_hba.conf # set no password login
+ALTER USER postgres with password 'very_secure_password'; # change password
+
+install miniconda create virtual environment management
+pgadmin4: create database, tables...
+use python postgres adapter psycopg2 to connect database
