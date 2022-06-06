@@ -56,4 +56,8 @@ git status
 git remote add origin remote-repo-url # link local repo to remote repo
 git remote -v # verify linking
 git push origin master # push to remote repo
+
+git remote add origin https://github.com/fan-bingbing/devops-box.git
+git branch -M main
+git push -u origin main
 ```
