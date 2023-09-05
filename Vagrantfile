@@ -1,5 +1,5 @@
 Vagrant.configure(2) do |config|
-	config.disksize.size = '100GB'
+	config.disksize.size = '100GB' # a plugin needs to be installed: vagrant plugin install vagrant-disksize
 	config.vm.provider "virtualbox" do |v| v.gui = true end
 	config.vm.define "devops-box" do |devbox|
 		devbox.vm.box = "ubuntu/bionic64"
