@@ -1,0 +1,3 @@
+from a fresh ubuntu machine, following commands needs to be run before running C program
+apt-get update
+apt-get install make gcc
